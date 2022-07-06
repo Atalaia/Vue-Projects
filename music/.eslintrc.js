@@ -23,6 +23,7 @@ module.exports = {
     'vuejs-accessibility/label-has-for': 'off',
     'eol-last': 'off',
     'vue/no-multiple-template-root':'off',
+    'vue/multi-word-component-names': 'off',
   },
 
   overrides: [
