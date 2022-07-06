@@ -24,6 +24,7 @@ module.exports = {
     'eol-last': 'off',
     'vue/no-multiple-template-root':'off',
     'vue/multi-word-component-names': 'off',
+    'vuejs-accessibility/click-events-have-key-events': 'off',
   },
 
   overrides: [
