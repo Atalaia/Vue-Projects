@@ -25,6 +25,7 @@ module.exports = {
     'vue/no-multiple-template-root':'off',
     'vue/multi-word-component-names': 'off',
     'vuejs-accessibility/click-events-have-key-events': 'off',
+    'quotes': 'off',
   },
 
   overrides: [
