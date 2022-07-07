@@ -26,6 +26,7 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     'vuejs-accessibility/click-events-have-key-events': 'off',
     'quotes': 'off',
+    'object-curly-newline': 'off',
   },
 
   overrides: [
