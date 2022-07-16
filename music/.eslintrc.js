@@ -27,6 +27,7 @@ module.exports = {
     'vuejs-accessibility/click-events-have-key-events': 'off',
     'quotes': 'off',
     'object-curly-newline': 'off',
+    'import/no-named-as-default-member': 'off',
   },
 
   overrides: [
