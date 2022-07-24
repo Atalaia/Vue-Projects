@@ -134,3 +134,21 @@
     </div>
   </section>
 </template>
+
+<script>
+// import store from "@/store";
+
+export default {
+  name: "manage",
+  //   beforeRouteEnter(to, from, next) {
+  //     console.log("beforeRouteEnter Guard");
+  //     console.log(store.state.userLoggedIn);
+
+  //     if (store.state.userLoggedIn) {
+  //       next();
+  //     } else {
+  //       next({ name: "home" });
+  //     }
+  //   },
+};
+</script>

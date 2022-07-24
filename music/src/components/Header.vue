@@ -5,7 +5,7 @@
       <!-- App Name -->
       <router-link
         class="text-white font-bold uppercase text-2xl mr-4"
-        to="/"
+        :to="{ name: 'home' }"
         exact-active-class="no-active"
         >Music
       </router-link>
@@ -15,7 +15,7 @@
         <ul class="flex flex-row mt-1">
           <!-- Navigation Links -->
           <li>
-            <router-link class="px-2 text-white" to="/about">About</router-link>
+            <router-link class="px-2 text-white" :to="{ name: 'about' }">About</router-link>
           </li>
           <li v-if="!userLoggedIn">
             <a class="px-2 text-white" href="#" @click.prevent="toggleAuthModal">
@@ -24,7 +24,7 @@
           </li>
           <template v-else>
             <li>
-              <router-link class="px-2 text-white" to="/manage">Manage</router-link>
+              <router-link class="px-2 text-white" :to="{ name: 'manage' }">Manage</router-link>
             </li>
             <li>
               <a class="px-2 text-white" href="#" @click.prevent="signout">Logout</a>
@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { mapMutations, mapState, mapActions } from "vuex";
+import { mapMutations, mapState } from "vuex";
 
 export default {
   name: "Header",
@@ -46,7 +46,17 @@ export default {
   },
   methods: {
     ...mapMutations(["toggleAuthModal"]),
-    ...mapActions(["signout"]),
+    signout() {
+      this.$store.dispatch("signout", {
+        router: this.$router,
+        route: this.$route,
+      });
+
+      // console.log(this.$route);
+      if (this.$route.meta.requiresAuth) {
+        this.$router.push({ name: 'home' });
+      }
+    },
   },
 };
 </script>
