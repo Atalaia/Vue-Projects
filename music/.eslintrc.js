@@ -28,6 +28,7 @@ module.exports = {
     'quotes': 'off',
     'object-curly-newline': 'off',
     'import/no-named-as-default-member': 'off',
+    'operator-linebreak': 'off',
   },
 
   overrides: [
